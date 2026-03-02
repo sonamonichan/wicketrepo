@@ -5,7 +5,7 @@
 <hibernate-configuration>
     <session-factory>
 
-        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
         <property name="connection.url">jdbc:mysql://127.0.0.1:3306/AddressBook?useSSL=false&amp;useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=UTC</property>
         <property name="connection.username">addressbook</property>
         <property name="connection.password">StrongPassword123!</property>
@@ -15,9 +15,9 @@
         <property name="hbm2ddl.auto">update</property>
         <property name="current_session_context_class">thread</property>
 
-        <!-- Use HBM mapping files ONLY -->
-        <mapping resource="model/HbUsersEntity.hbm.xml"/>
-        <mapping resource="model/HbContactsEntity.hbm.xml"/>
+        <!-- Use annotation-based mapping classes -->
+        <mapping class="com.arun.model.HbUsersEntity"/>
+        <mapping class="com.arun.model.HbContactsEntity"/>
 
     </session-factory>
 </hibernate-configuration>
