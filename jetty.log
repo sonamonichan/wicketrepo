@@ -4,142 +4,216 @@
 [INFO] Building addressbook 1.0-SNAPSHOT
 [INFO] --------------------------------[ war ]---------------------------------
 [INFO] 
-[INFO] >>> jetty-maven-plugin:9.2.19.v20160908:run (default-cli) > test-compile @ addressbook >>>
+[INFO] >>> jetty-maven-plugin:9.4.56.v20240826:run (default-cli) > test-compile @ addressbook >>>
+[WARNING] The artifact org.hibernate:hibernate-validator:jar:6.2.5.Final has been relocated to org.hibernate.validator:hibernate-validator:jar:6.2.5.Final
 [INFO] 
 [INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ addressbook ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 4 resources
+[INFO] Copying 2 resources
 [INFO] Copying 8 resources
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ addressbook ---
-[INFO] Nothing to compile - all classes are up to date
+[INFO] --- maven-compiler-plugin:3.13.0:compile (default-compile) @ addressbook ---
+[INFO] Nothing to compile - all classes are up to date.
 [INFO] 
 [INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ addressbook ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
 [INFO] Copying 1 resource
 [INFO] Copying 0 resource
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ addressbook ---
-[INFO] Nothing to compile - all classes are up to date
+[INFO] --- maven-compiler-plugin:3.13.0:testCompile (default-testCompile) @ addressbook ---
+[INFO] Nothing to compile - all classes are up to date.
 [INFO] 
-[INFO] <<< jetty-maven-plugin:9.2.19.v20160908:run (default-cli) < test-compile @ addressbook <<<
+[INFO] <<< jetty-maven-plugin:9.4.56.v20240826:run (default-cli) < test-compile @ addressbook <<<
 [INFO] 
 [INFO] 
-[INFO] --- jetty-maven-plugin:9.2.19.v20160908:run (default-cli) @ addressbook ---
-[INFO] Logging initialized @2302ms
-[INFO] Configuring Jetty for project: addressbook
+[INFO] --- jetty-maven-plugin:9.4.56.v20240826:run (default-cli) @ addressbook ---
 [INFO] webAppSourceDirectory not set. Trying src/main/webapp
 [INFO] Reload Mechanic: automatic
+[INFO] nonBlocking:false
 [INFO] Classes = /home/ec2-user/wicketrepo/target/classes
+[INFO] Configuring Jetty for project: addressbook
+[INFO] Logging initialized @2846ms to org.eclipse.jetty.util.log.Slf4jLog
 [INFO] Configuring Jetty from xml configuration file = /home/ec2-user/wicketrepo/src/test/jetty/jetty.xml
 [INFO] Configuring Jetty from xml configuration file = /home/ec2-user/wicketrepo/src/test/jetty/jetty-ssl.xml
+[WARNING] Deprecated constructor public org.eclipse.jetty.util.ssl.SslContextFactory() in file:///home/ec2-user/wicketrepo/src/test/jetty/jetty-ssl.xml
 [INFO] Configuring Jetty from xml configuration file = /home/ec2-user/wicketrepo/src/test/jetty/jetty-http.xml
 [INFO] Configuring Jetty from xml configuration file = /home/ec2-user/wicketrepo/src/test/jetty/jetty-https.xml
 [INFO] Context path = /
 [INFO] Tmp directory = /home/ec2-user/wicketrepo/target/tmp
 [INFO] Web defaults = org/eclipse/jetty/webapp/webdefault.xml
 [INFO] Web overrides =  none
-[INFO] web.xml file = file:/home/ec2-user/wicketrepo/src/main/webapp/WEB-INF/web.xml
+[INFO] web.xml file = file:///home/ec2-user/wicketrepo/src/main/webapp/WEB-INF/web.xml
 [INFO] Webapp directory = /home/ec2-user/wicketrepo/src/main/webapp
-[INFO] jetty-9.2.19.v20160908
+[INFO] jetty-9.4.56.v20240826; built: 2024-08-26T17:15:05.868Z; git: ec6782ff5ead824dabdcf47fa98f90a4aedff401; jvm 21.0.10+7-LTS
+[WARNING] javax.xml.bind.Binder scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/Binder.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/Binder.class
+[WARNING] javax.xml.bind.ContextFinder$1 scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/ContextFinder$1.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/ContextFinder$1.class
+[WARNING] javax.xml.bind.ContextFinder$2 scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/ContextFinder$2.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/ContextFinder$2.class
+[WARNING] javax.xml.bind.ContextFinder$3 scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/ContextFinder$3.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/ContextFinder$3.class
+[WARNING] javax.xml.bind.ContextFinder$4 scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/ContextFinder$4.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/ContextFinder$4.class
+[WARNING] javax.xml.bind.ContextFinder$5 scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/ContextFinder$5.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/ContextFinder$5.class
+[WARNING] javax.xml.bind.ContextFinder scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/ContextFinder.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/ContextFinder.class
+[WARNING] javax.xml.bind.DataBindingException scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/DataBindingException.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/DataBindingException.class
+[WARNING] javax.xml.bind.DatatypeConverter scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/DatatypeConverter.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/DatatypeConverter.class
+[WARNING] javax.xml.bind.DatatypeConverterImpl$CalendarFormatter scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/DatatypeConverterImpl$CalendarFormatter.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/DatatypeConverterImpl$CalendarFormatter.class
+[WARNING] javax.xml.bind.DatatypeConverterImpl scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/DatatypeConverterImpl.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/DatatypeConverterImpl.class
+[WARNING] javax.xml.bind.DatatypeConverterInterface scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/DatatypeConverterInterface.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/DatatypeConverterInterface.class
+[WARNING] javax.xml.bind.Element scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/Element.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/Element.class
+[WARNING] javax.xml.bind.GetPropertyAction scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/GetPropertyAction.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/GetPropertyAction.class
+[WARNING] javax.xml.bind.JAXB$Cache scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/JAXB$Cache.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/JAXB$Cache.class
+[WARNING] javax.xml.bind.JAXB scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/JAXB.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/JAXB.class
+[WARNING] javax.xml.bind.JAXBContext$1 scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/JAXBContext$1.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/JAXBContext$1.class
+[WARNING] javax.xml.bind.JAXBContext scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/JAXBContext.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/JAXBContext.class
+[WARNING] javax.xml.bind.JAXBContextFactory scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/JAXBContextFactory.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/JAXBContextFactory.class
+[WARNING] javax.xml.bind.JAXBElement$GlobalScope scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/JAXBElement$GlobalScope.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/JAXBElement$GlobalScope.class
+[WARNING] javax.xml.bind.JAXBElement scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/JAXBElement.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/JAXBElement.class
+[WARNING] javax.xml.bind.JAXBException scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/JAXBException.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/JAXBException.class
+[WARNING] javax.xml.bind.JAXBIntrospector scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/JAXBIntrospector.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/JAXBIntrospector.class
+[WARNING] javax.xml.bind.JAXBPermission scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/JAXBPermission.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/JAXBPermission.class
+[WARNING] javax.xml.bind.MarshalException scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/MarshalException.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/MarshalException.class
+[WARNING] javax.xml.bind.Marshaller$Listener scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/Marshaller$Listener.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/Marshaller$Listener.class
+[WARNING] javax.xml.bind.Marshaller scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/Marshaller.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/Marshaller.class
+[WARNING] javax.xml.bind.Messages scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/Messages.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/Messages.class
+[WARNING] javax.xml.bind.ModuleUtil scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/ModuleUtil.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/ModuleUtil.class
+[WARNING] javax.xml.bind.NotIdentifiableEvent scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/NotIdentifiableEvent.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/NotIdentifiableEvent.class
+[WARNING] javax.xml.bind.ParseConversionEvent scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/ParseConversionEvent.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/ParseConversionEvent.class
+[WARNING] javax.xml.bind.PrintConversionEvent scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/PrintConversionEvent.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/PrintConversionEvent.class
+[WARNING] javax.xml.bind.PropertyException scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/PropertyException.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/PropertyException.class
+[WARNING] javax.xml.bind.SchemaOutputResolver scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/SchemaOutputResolver.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/SchemaOutputResolver.class
+[WARNING] javax.xml.bind.ServiceLoaderUtil$ExceptionHandler scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/ServiceLoaderUtil$ExceptionHandler.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/ServiceLoaderUtil$ExceptionHandler.class
+[WARNING] javax.xml.bind.ServiceLoaderUtil scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/ServiceLoaderUtil.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/ServiceLoaderUtil.class
+[WARNING] javax.xml.bind.TypeConstraintException scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/TypeConstraintException.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/TypeConstraintException.class
+[WARNING] javax.xml.bind.UnmarshalException scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/UnmarshalException.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/UnmarshalException.class
+[WARNING] javax.xml.bind.Unmarshaller$Listener scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/Unmarshaller$Listener.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/Unmarshaller$Listener.class
+[WARNING] javax.xml.bind.Unmarshaller scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/Unmarshaller.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/Unmarshaller.class
+[WARNING] javax.xml.bind.UnmarshallerHandler scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/UnmarshallerHandler.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/UnmarshallerHandler.class
+[WARNING] javax.xml.bind.ValidationEvent scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/ValidationEvent.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/ValidationEvent.class
+[WARNING] javax.xml.bind.ValidationEventHandler scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/ValidationEventHandler.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/ValidationEventHandler.class
+[WARNING] javax.xml.bind.ValidationEventLocator scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/ValidationEventLocator.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/ValidationEventLocator.class
+[WARNING] javax.xml.bind.ValidationException scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/ValidationException.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/ValidationException.class
+[WARNING] javax.xml.bind.Validator scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/Validator.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/Validator.class
+[WARNING] javax.xml.bind.WhiteSpaceProcessor scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/WhiteSpaceProcessor.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/WhiteSpaceProcessor.class
+[WARNING] javax.xml.bind.annotation.DomHandler scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/annotation/DomHandler.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/annotation/DomHandler.class
+[WARNING] javax.xml.bind.annotation.W3CDomHandler scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/annotation/W3CDomHandler.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/annotation/W3CDomHandler.class
+[WARNING] javax.xml.bind.annotation.XmlAccessOrder scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/annotation/XmlAccessOrder.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/annotation/XmlAccessOrder.class
+[WARNING] javax.xml.bind.annotation.XmlAccessType scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/annotation/XmlAccessType.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/annotation/XmlAccessType.class
+[WARNING] javax.xml.bind.annotation.XmlAccessorOrder scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/annotation/XmlAccessorOrder.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/annotation/XmlAccessorOrder.class
+[WARNING] javax.xml.bind.annotation.XmlAccessorType scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/annotation/XmlAccessorType.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/annotation/XmlAccessorType.class
+[WARNING] javax.xml.bind.annotation.XmlAnyAttribute scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/annotation/XmlAnyAttribute.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/annotation/XmlAnyAttribute.class
+[WARNING] javax.xml.bind.annotation.XmlAnyElement scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/annotation/XmlAnyElement.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/annotation/XmlAnyElement.class
+[WARNING] javax.xml.bind.annotation.XmlAttachmentRef scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/annotation/XmlAttachmentRef.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/annotation/XmlAttachmentRef.class
+[WARNING] javax.xml.bind.annotation.XmlAttribute scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/annotation/XmlAttribute.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/annotation/XmlAttribute.class
+[WARNING] javax.xml.bind.annotation.XmlElement$DEFAULT scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/annotation/XmlElement$DEFAULT.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/annotation/XmlElement$DEFAULT.class
+[WARNING] javax.xml.bind.annotation.XmlElement scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/annotation/XmlElement.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/annotation/XmlElement.class
+[WARNING] javax.xml.bind.annotation.XmlElementDecl$GLOBAL scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/annotation/XmlElementDecl$GLOBAL.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/annotation/XmlElementDecl$GLOBAL.class
+[WARNING] javax.xml.bind.annotation.XmlElementDecl scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/annotation/XmlElementDecl.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/annotation/XmlElementDecl.class
+[WARNING] javax.xml.bind.annotation.XmlElementRef$DEFAULT scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/annotation/XmlElementRef$DEFAULT.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/annotation/XmlElementRef$DEFAULT.class
+[WARNING] javax.xml.bind.annotation.XmlElementRef scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/annotation/XmlElementRef.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/annotation/XmlElementRef.class
+[WARNING] javax.xml.bind.annotation.XmlElementRefs scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/annotation/XmlElementRefs.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/annotation/XmlElementRefs.class
+[WARNING] javax.xml.bind.annotation.XmlElementWrapper scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/annotation/XmlElementWrapper.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/annotation/XmlElementWrapper.class
+[WARNING] javax.xml.bind.annotation.XmlElements scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/annotation/XmlElements.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/annotation/XmlElements.class
+[WARNING] javax.xml.bind.annotation.XmlEnum scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/annotation/XmlEnum.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/annotation/XmlEnum.class
+[WARNING] javax.xml.bind.annotation.XmlEnumValue scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/annotation/XmlEnumValue.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/annotation/XmlEnumValue.class
+[WARNING] javax.xml.bind.annotation.XmlID scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/annotation/XmlID.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/annotation/XmlID.class
+[WARNING] javax.xml.bind.annotation.XmlIDREF scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/annotation/XmlIDREF.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/annotation/XmlIDREF.class
+[WARNING] javax.xml.bind.annotation.XmlInlineBinaryData scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/annotation/XmlInlineBinaryData.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/annotation/XmlInlineBinaryData.class
+[WARNING] javax.xml.bind.annotation.XmlList scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/annotation/XmlList.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/annotation/XmlList.class
+[WARNING] javax.xml.bind.annotation.XmlMimeType scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/annotation/XmlMimeType.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/annotation/XmlMimeType.class
+[WARNING] javax.xml.bind.annotation.XmlMixed scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/annotation/XmlMixed.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/annotation/XmlMixed.class
+[WARNING] javax.xml.bind.annotation.XmlNs scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/annotation/XmlNs.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/annotation/XmlNs.class
+[WARNING] javax.xml.bind.annotation.XmlNsForm scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/annotation/XmlNsForm.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/annotation/XmlNsForm.class
+[WARNING] javax.xml.bind.annotation.XmlRegistry scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/annotation/XmlRegistry.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/annotation/XmlRegistry.class
+[WARNING] javax.xml.bind.annotation.XmlRootElement scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/annotation/XmlRootElement.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/annotation/XmlRootElement.class
+[WARNING] javax.xml.bind.annotation.XmlSchema scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/annotation/XmlSchema.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/annotation/XmlSchema.class
+[WARNING] javax.xml.bind.annotation.XmlSchemaType$DEFAULT scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/annotation/XmlSchemaType$DEFAULT.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/annotation/XmlSchemaType$DEFAULT.class
+[WARNING] javax.xml.bind.annotation.XmlSchemaType scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/annotation/XmlSchemaType.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/annotation/XmlSchemaType.class
+[WARNING] javax.xml.bind.annotation.XmlSchemaTypes scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/annotation/XmlSchemaTypes.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/annotation/XmlSchemaTypes.class
+[WARNING] javax.xml.bind.annotation.XmlSeeAlso scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/annotation/XmlSeeAlso.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/annotation/XmlSeeAlso.class
+[WARNING] javax.xml.bind.annotation.XmlTransient scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/annotation/XmlTransient.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/annotation/XmlTransient.class
+[WARNING] javax.xml.bind.annotation.XmlType$DEFAULT scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/annotation/XmlType$DEFAULT.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/annotation/XmlType$DEFAULT.class
+[WARNING] javax.xml.bind.annotation.XmlType scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/annotation/XmlType.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/annotation/XmlType.class
+[WARNING] javax.xml.bind.annotation.XmlValue scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/annotation/XmlValue.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/annotation/XmlValue.class
+[WARNING] javax.xml.bind.annotation.adapters.CollapsedStringAdapter scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/annotation/adapters/CollapsedStringAdapter.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/annotation/adapters/CollapsedStringAdapter.class
+[WARNING] javax.xml.bind.annotation.adapters.HexBinaryAdapter scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/annotation/adapters/HexBinaryAdapter.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/annotation/adapters/HexBinaryAdapter.class
+[WARNING] javax.xml.bind.annotation.adapters.NormalizedStringAdapter scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/annotation/adapters/NormalizedStringAdapter.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/annotation/adapters/NormalizedStringAdapter.class
+[WARNING] javax.xml.bind.annotation.adapters.XmlAdapter scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/annotation/adapters/XmlAdapter.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/annotation/adapters/XmlAdapter.class
+[WARNING] javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter$DEFAULT scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/annotation/adapters/XmlJavaTypeAdapter$DEFAULT.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/annotation/adapters/XmlJavaTypeAdapter$DEFAULT.class
+[WARNING] javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/annotation/adapters/XmlJavaTypeAdapter.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/annotation/adapters/XmlJavaTypeAdapter.class
+[WARNING] javax.xml.bind.annotation.adapters.XmlJavaTypeAdapters scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/annotation/adapters/XmlJavaTypeAdapters.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/annotation/adapters/XmlJavaTypeAdapters.class
+[WARNING] javax.xml.bind.attachment.AttachmentMarshaller scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/attachment/AttachmentMarshaller.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/attachment/AttachmentMarshaller.class
+[WARNING] javax.xml.bind.attachment.AttachmentUnmarshaller scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/attachment/AttachmentUnmarshaller.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/attachment/AttachmentUnmarshaller.class
+[WARNING] javax.xml.bind.helpers.AbstractMarshallerImpl scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/helpers/AbstractMarshallerImpl.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/helpers/AbstractMarshallerImpl.class
+[WARNING] javax.xml.bind.helpers.AbstractUnmarshallerImpl scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/helpers/AbstractUnmarshallerImpl.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/helpers/AbstractUnmarshallerImpl.class
+[WARNING] javax.xml.bind.helpers.DefaultValidationEventHandler scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/helpers/DefaultValidationEventHandler.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/helpers/DefaultValidationEventHandler.class
+[WARNING] javax.xml.bind.helpers.Messages scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/helpers/Messages.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/helpers/Messages.class
+[WARNING] javax.xml.bind.helpers.NotIdentifiableEventImpl scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/helpers/NotIdentifiableEventImpl.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/helpers/NotIdentifiableEventImpl.class
+[WARNING] javax.xml.bind.helpers.ParseConversionEventImpl scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/helpers/ParseConversionEventImpl.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/helpers/ParseConversionEventImpl.class
+[WARNING] javax.xml.bind.helpers.PrintConversionEventImpl scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/helpers/PrintConversionEventImpl.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/helpers/PrintConversionEventImpl.class
+[WARNING] javax.xml.bind.helpers.ValidationEventImpl scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/helpers/ValidationEventImpl.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/helpers/ValidationEventImpl.class
+[WARNING] javax.xml.bind.helpers.ValidationEventLocatorImpl scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/helpers/ValidationEventLocatorImpl.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/helpers/ValidationEventLocatorImpl.class
+[WARNING] javax.xml.bind.util.JAXBResult scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/util/JAXBResult.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/util/JAXBResult.class
+[WARNING] javax.xml.bind.util.JAXBSource$1 scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/util/JAXBSource$1.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/util/JAXBSource$1.class
+[WARNING] javax.xml.bind.util.JAXBSource scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/util/JAXBSource.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/util/JAXBSource.class
+[WARNING] javax.xml.bind.util.Messages scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/util/Messages.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/util/Messages.class
+[WARNING] javax.xml.bind.util.ValidationEventCollector scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar!/javax/xml/bind/util/ValidationEventCollector.class, jar:file:///home/ec2-user/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/javax/xml/bind/util/ValidationEventCollector.class
+[WARNING] javax.activation.ActivationDataFlavor scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar!/javax/activation/ActivationDataFlavor.class, jar:file:///home/ec2-user/.m2/repository/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar!/javax/activation/ActivationDataFlavor.class
+[WARNING] javax.activation.CommandInfo$Beans$1 scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar!/javax/activation/CommandInfo$Beans$1.class, jar:file:///home/ec2-user/.m2/repository/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar!/javax/activation/CommandInfo$Beans$1.class
+[WARNING] javax.activation.CommandInfo$Beans scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar!/javax/activation/CommandInfo$Beans.class, jar:file:///home/ec2-user/.m2/repository/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar!/javax/activation/CommandInfo$Beans.class
+[WARNING] javax.activation.CommandInfo scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar!/javax/activation/CommandInfo.class, jar:file:///home/ec2-user/.m2/repository/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar!/javax/activation/CommandInfo.class
+[WARNING] javax.activation.CommandMap scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar!/javax/activation/CommandMap.class, jar:file:///home/ec2-user/.m2/repository/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar!/javax/activation/CommandMap.class
+[WARNING] javax.activation.CommandObject scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar!/javax/activation/CommandObject.class, jar:file:///home/ec2-user/.m2/repository/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar!/javax/activation/CommandObject.class
+[WARNING] javax.activation.DataContentHandler scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar!/javax/activation/DataContentHandler.class, jar:file:///home/ec2-user/.m2/repository/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar!/javax/activation/DataContentHandler.class
+[WARNING] javax.activation.DataContentHandlerFactory scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar!/javax/activation/DataContentHandlerFactory.class, jar:file:///home/ec2-user/.m2/repository/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar!/javax/activation/DataContentHandlerFactory.class
+[WARNING] javax.activation.DataHandler$1 scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar!/javax/activation/DataHandler$1.class, jar:file:///home/ec2-user/.m2/repository/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar!/javax/activation/DataHandler$1.class
+[WARNING] javax.activation.DataHandler scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar!/javax/activation/DataHandler.class, jar:file:///home/ec2-user/.m2/repository/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar!/javax/activation/DataHandler.class
+[WARNING] javax.activation.DataHandlerDataSource scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar!/javax/activation/DataHandlerDataSource.class, jar:file:///home/ec2-user/.m2/repository/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar!/javax/activation/DataHandlerDataSource.class
+[WARNING] javax.activation.DataSource scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar!/javax/activation/DataSource.class, jar:file:///home/ec2-user/.m2/repository/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar!/javax/activation/DataSource.class
+[WARNING] javax.activation.DataSourceDataContentHandler scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar!/javax/activation/DataSourceDataContentHandler.class, jar:file:///home/ec2-user/.m2/repository/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar!/javax/activation/DataSourceDataContentHandler.class
+[WARNING] javax.activation.FileDataSource scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar!/javax/activation/FileDataSource.class, jar:file:///home/ec2-user/.m2/repository/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar!/javax/activation/FileDataSource.class
+[WARNING] javax.activation.FileTypeMap scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar!/javax/activation/FileTypeMap.class, jar:file:///home/ec2-user/.m2/repository/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar!/javax/activation/FileTypeMap.class
+[WARNING] javax.activation.MailcapCommandMap$1 scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar!/javax/activation/MailcapCommandMap$1.class, jar:file:///home/ec2-user/.m2/repository/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar!/javax/activation/MailcapCommandMap$1.class
+[WARNING] javax.activation.MailcapCommandMap scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar!/javax/activation/MailcapCommandMap.class, jar:file:///home/ec2-user/.m2/repository/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar!/javax/activation/MailcapCommandMap.class
+[WARNING] javax.activation.MimeType scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar!/javax/activation/MimeType.class, jar:file:///home/ec2-user/.m2/repository/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar!/javax/activation/MimeType.class
+[WARNING] javax.activation.MimeTypeParameterList scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar!/javax/activation/MimeTypeParameterList.class, jar:file:///home/ec2-user/.m2/repository/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar!/javax/activation/MimeTypeParameterList.class
+[WARNING] javax.activation.MimeTypeParseException scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar!/javax/activation/MimeTypeParseException.class, jar:file:///home/ec2-user/.m2/repository/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar!/javax/activation/MimeTypeParseException.class
+[WARNING] javax.activation.MimetypesFileTypeMap$1 scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar!/javax/activation/MimetypesFileTypeMap$1.class, jar:file:///home/ec2-user/.m2/repository/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar!/javax/activation/MimetypesFileTypeMap$1.class
+[WARNING] javax.activation.MimetypesFileTypeMap scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar!/javax/activation/MimetypesFileTypeMap.class, jar:file:///home/ec2-user/.m2/repository/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar!/javax/activation/MimetypesFileTypeMap.class
+[WARNING] javax.activation.ObjectDataContentHandler scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar!/javax/activation/ObjectDataContentHandler.class, jar:file:///home/ec2-user/.m2/repository/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar!/javax/activation/ObjectDataContentHandler.class
+[WARNING] javax.activation.SecuritySupport$1 scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar!/javax/activation/SecuritySupport$1.class, jar:file:///home/ec2-user/.m2/repository/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar!/javax/activation/SecuritySupport$1.class
+[WARNING] javax.activation.SecuritySupport$2 scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar!/javax/activation/SecuritySupport$2.class, jar:file:///home/ec2-user/.m2/repository/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar!/javax/activation/SecuritySupport$2.class
+[WARNING] javax.activation.SecuritySupport$3 scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar!/javax/activation/SecuritySupport$3.class, jar:file:///home/ec2-user/.m2/repository/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar!/javax/activation/SecuritySupport$3.class
+[WARNING] javax.activation.SecuritySupport$4 scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar!/javax/activation/SecuritySupport$4.class, jar:file:///home/ec2-user/.m2/repository/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar!/javax/activation/SecuritySupport$4.class
+[WARNING] javax.activation.SecuritySupport$5 scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar!/javax/activation/SecuritySupport$5.class, jar:file:///home/ec2-user/.m2/repository/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar!/javax/activation/SecuritySupport$5.class
+[WARNING] javax.activation.SecuritySupport scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar!/javax/activation/SecuritySupport.class, jar:file:///home/ec2-user/.m2/repository/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar!/javax/activation/SecuritySupport.class
+[WARNING] javax.activation.URLDataSource scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar!/javax/activation/URLDataSource.class, jar:file:///home/ec2-user/.m2/repository/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar!/javax/activation/URLDataSource.class
+[WARNING] javax.activation.UnsupportedDataTypeException scanned from multiple locations: jar:file:///home/ec2-user/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar!/javax/activation/UnsupportedDataTypeException.class, jar:file:///home/ec2-user/.m2/repository/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar!/javax/activation/UnsupportedDataTypeException.class
+[INFO] Scanning elapsed time=1002ms
+[INFO] DefaultSessionIdManager workerName=node0
+[INFO] No SessionScavenger set, using defaults
+[INFO] node0 Scavenging every 660000ms
+SLF4J(W): No SLF4J providers were found.
+SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+SLF4J(W): Class path contains SLF4J bindings targeting slf4j-api versions 1.7.x or earlier.
+SLF4J(W): Ignoring binding found at [jar:file:/home/ec2-user/.m2/repository/org/apache/logging/log4j/log4j-slf4j-impl/2.23.1/log4j-slf4j-impl-2.23.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J(W): See https://www.slf4j.org/codes.html#ignoredBindings for an explanation.
 ********************************************************************
 *** WARNING: Wicket is running in DEVELOPMENT mode.              ***
 ***                               ^^^^^^^^^^^                    ***
 *** Do NOT deploy to your live server(s) without changing this.  ***
 *** See Application#getConfigurationType() for more information. ***
 ********************************************************************
-[INFO] Started o.e.j.m.p.JettyWebAppContext@3c6aa04a{/,file:/home/ec2-user/wicketrepo/src/main/webapp/,AVAILABLE}{file:/home/ec2-user/wicketrepo/src/main/webapp/}
-[WARNING] !RequestLog
-[INFO] Started ServerConnector@2e5b7fba{HTTP/1.1}{0.0.0.0:8080}
-[INFO] Started ServerConnector@6c6017b9{SSL-http/1.1}{0.0.0.0:8443}
-[INFO] Started @6426ms
-[INFO] Started Jetty Server
-56014 [WARN] pooling: HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-Hibernate: 
-    select
-        hbusersent0_.iduser as iduser1_1_,
-        hbusersent0_.username as username2_1_,
-        hbusersent0_.userpass as userpass3_1_,
-        hbusersent0_.useremail as useremai4_1_ 
-    from
-        users hbusersent0_ 
-    where
-        hbusersent0_.username=?
-Hibernate: 
-    select
-        hbusersent0_.iduser as iduser1_1_,
-        hbusersent0_.username as username2_1_,
-        hbusersent0_.userpass as userpass3_1_,
-        hbusersent0_.useremail as useremai4_1_ 
-    from
-        users hbusersent0_ 
-    where
-        hbusersent0_.username=?
-Hibernate: 
-    select
-        hbcontacts0_.idcontact as idcontac1_0_,
-        hbcontacts0_.iduser as iduser2_0_,
-        hbcontacts0_.contact_name as contact_3_0_,
-        hbcontacts0_.contact_email as contact_4_0_,
-        hbcontacts0_.contact_phone as contact_5_0_,
-        hbcontacts0_.contact_address as contact_6_0_ 
-    from
-        contacts hbcontacts0_ 
-    where
-        hbcontacts0_.iduser=?
-70426 [WARN] PackageResource: resource [path = com/arun/contacts/signout_new.jpg, style = null, variation = null, locale = en_IN]: Unable to find resource (status=404)
-Hibernate: 
-    select
-        hbcontacts_.idcontact,
-        hbcontacts_.iduser as iduser2_0_,
-        hbcontacts_.contact_name as contact_3_0_,
-        hbcontacts_.contact_email as contact_4_0_,
-        hbcontacts_.contact_phone as contact_5_0_,
-        hbcontacts_.contact_address as contact_6_0_ 
-    from
-        contacts hbcontacts_ 
-    where
-        hbcontacts_.idcontact=?
-Hibernate: 
-    insert 
-    into
-        contacts
-        (iduser, contact_name, contact_email, contact_phone, contact_address, idcontact) 
-    values
-        (?, ?, ?, ?, ?, ?)
-Hibernate: 
-    select
-        hbcontacts0_.idcontact as idcontac1_0_,
-        hbcontacts0_.iduser as iduser2_0_,
-        hbcontacts0_.contact_name as contact_3_0_,
-        hbcontacts0_.contact_email as contact_4_0_,
-        hbcontacts0_.contact_phone as contact_5_0_,
-        hbcontacts0_.contact_address as contact_6_0_ 
-    from
-        contacts hbcontacts0_ 
-    where
-        hbcontacts0_.iduser=?
-165347 [WARN] PackageResource: resource [path = com/arun/contacts/signout_new.jpg, style = null, variation = null, locale = en_IN]: Unable to find resource (status=404)
-Hibernate: 
-    select
-        hbusersent0_.iduser as iduser1_1_,
-        hbusersent0_.username as username2_1_,
-        hbusersent0_.userpass as userpass3_1_,
-        hbusersent0_.useremail as useremai4_1_ 
-    from
-        users hbusersent0_ 
-    where
-        hbusersent0_.username=?
-Hibernate: 
-    select
-        hbcontacts0_.idcontact as idcontac1_0_,
-        hbcontacts0_.iduser as iduser2_0_,
-        hbcontacts0_.contact_name as contact_3_0_,
-        hbcontacts0_.contact_email as contact_4_0_,
-        hbcontacts0_.contact_phone as contact_5_0_,
-        hbcontacts0_.contact_address as contact_6_0_ 
-    from
-        contacts hbcontacts0_ 
-    where
-        hbcontacts0_.iduser=?
-203901 [WARN] PackageResource: resource [path = com/arun/contacts/signout_new.jpg, style = null, variation = null, locale = en_IN]: Unable to find resource (status=404)
+[INFO] Started o.e.j.m.p.JettyWebAppContext@40de8f93{addressbook,/,file:///home/ec2-user/wicketrepo/src/main/webapp/,AVAILABLE}{file:///home/ec2-user/wicketrepo/src/main/webapp/}
+[INFO] Jetty server exiting.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.493 s
+[INFO] Finished at: 2026-03-02T08:11:04Z
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.eclipse.jetty:jetty-maven-plugin:9.4.56.v20240826:run (default-cli) on project addressbook: Failure: Multiple exceptions: Failed to bind to /0.0.0.0:8080: Address already in use -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
