@@ -151,26 +151,21 @@
             <version>${hibernate.version}</version>
         </dependency>
 
-        <!-- FIX 2: JAXB for Hibernate XML mapping on Java 9+ (use 2.2.11 to avoid Jetty 9.2 scan issue) -->
+        <!-- FIX 2: JAXB for Hibernate XML mapping on Java 9+ (use 2.3.x javax namespace, NOT jakarta) -->
         <dependency>
             <groupId>javax.xml.bind</groupId>
             <artifactId>jaxb-api</artifactId>
-            <version>2.2.11</version>
+            <version>2.3.1</version>
         </dependency>
         <dependency>
-            <groupId>com.sun.xml.bind</groupId>
-            <artifactId>jaxb-core</artifactId>
-            <version>2.2.11</version>
-        </dependency>
-        <dependency>
-            <groupId>com.sun.xml.bind</groupId>
-            <artifactId>jaxb-impl</artifactId>
-            <version>2.2.11</version>
+            <groupId>org.glassfish.jaxb</groupId>
+            <artifactId>jaxb-runtime</artifactId>
+            <version>2.3.9</version>
         </dependency>
         <dependency>
             <groupId>javax.activation</groupId>
-            <artifactId>activation</artifactId>
-            <version>1.1.1</version>
+            <artifactId>javax.activation-api</artifactId>
+            <version>1.2.0</version>
         </dependency>
 
     </dependencies>
