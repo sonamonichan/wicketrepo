@@ -1,5 +1,7 @@
 package com.arun;
 
+import org.apache.wicket.csp.CSPDirective;
+import org.apache.wicket.csp.CSPDirectiveSrcValue;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.protocol.http.WebApplication;
 
@@ -26,5 +28,18 @@ public class WicketApplication extends WebApplication {
         super.init();
 
         // add your configuration here
+
+        // Configure Content-Security-Policy to allow loading of external stylesheets, fonts, and scripts
+        getCspSettings().blocking()
+            .add(CSPDirective.STYLE_SRC, CSPDirectiveSrcValue.SELF)
+            .add(CSPDirective.STYLE_SRC, CSPDirectiveSrcValue.UNSAFE_INLINE)
+            .add(CSPDirective.STYLE_SRC, "https://fonts.googleapis.com")
+            .add(CSPDirective.STYLE_SRC, "https://maxcdn.bootstrapcdn.com")
+            .add(CSPDirective.FONT_SRC, CSPDirectiveSrcValue.SELF)
+            .add(CSPDirective.FONT_SRC, "https://fonts.gstatic.com")
+            .add(CSPDirective.FONT_SRC, "data:")
+            .add(CSPDirective.IMG_SRC, CSPDirectiveSrcValue.SELF)
+            .add(CSPDirective.SCRIPT_SRC, CSPDirectiveSrcValue.SELF)
+            .add(CSPDirective.SCRIPT_SRC, CSPDirectiveSrcValue.UNSAFE_INLINE);
     }
 }
