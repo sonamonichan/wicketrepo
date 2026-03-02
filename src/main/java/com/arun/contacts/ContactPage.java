@@ -11,7 +11,6 @@ import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.ImageButton;
 import org.apache.wicket.markup.html.form.TextArea;
 import org.apache.wicket.markup.html.form.TextField;
-import org.apache.wicket.markup.html.link.ILinkListener;
 import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.repeater.RepeatingView;
 import org.apache.wicket.model.IModel;
@@ -418,9 +417,9 @@ public class ContactPage extends WebPage {
 
 
     /**
-     * Class that implements ILinkListener to override onLickClicked() so that the contact display action can be performed
+     * Class that implements Runnable to override run() so that the contact display action can be performed
      */
-    public class OnContactClicked implements ILinkListener {
+    public class OnContactClicked implements Runnable {
 
         int contactId;
         String contactName;
@@ -437,7 +436,7 @@ public class ContactPage extends WebPage {
         }
 
         @Override
-        public void onLinkClicked() {
+        public void run() {
             contactError.setVisible(false);
             LOGGER.info("Contact Clicked: " + contactName);
             nameHeadingModel.setObject("" + contactName);
