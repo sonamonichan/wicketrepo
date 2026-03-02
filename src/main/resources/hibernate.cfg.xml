@@ -2,18 +2,12 @@
 <!DOCTYPE hibernate-configuration PUBLIC
         "-//Hibernate/Hibernate Configuration DTD//EN"
         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
-
 <hibernate-configuration>
     <session-factory>
 
         <!-- JDBC connection settings -->
         <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-
-        <!-- IMPORTANT: & must be written as &amp; in XML -->
-        <property name="connection.url">
-            jdbc:mysql://127.0.0.1:3306/AddressBook?useSSL=false&amp;useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=UTC
-        </property>
-
+        <property name="connection.url">jdbc:mysql://127.0.0.1:3306/AddressBook?useSSL=false&amp;useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=UTC</property>
         <property name="connection.username">addressbook</property>
         <property name="connection.password">StrongPassword123!</property>
 
@@ -21,13 +15,13 @@
         <property name="hibernate.show_sql">true</property>
         <property name="hibernate.format_sql">true</property>
 
-        <!-- Auto-create/update schema (good for dev/testing) -->
+        <!-- Auto-create/update schema -->
         <property name="hbm2ddl.auto">update</property>
 
         <!-- Session context -->
         <property name="current_session_context_class">thread</property>
 
-        <!-- Entity mappings (use annotations) -->
+        <!-- Entity mappings (annotations only) -->
         <mapping class="com.arun.model.HbContactsEntity"/>
         <mapping class="com.arun.model.HbUsersEntity"/>
 
