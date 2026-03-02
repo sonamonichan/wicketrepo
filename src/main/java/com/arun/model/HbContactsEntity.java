@@ -1,17 +1,18 @@
 package com.arun.model;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+import javax.persistence.*;
 import java.io.Serializable;
 
 /**
  * Hibernate Entity for contact table in database. This has the information regarding the addressbook contacts in the database
  * Created by Arun on 2/27/2017.
  */
-@javax.persistence.Entity
-@javax.persistence.Table(name = "contacts", schema = "AddressBook", catalog = "")
-public class HbContactsEntity {
-    @GeneratedValue(strategy= GenerationType.AUTO)
+@Entity
+@Table(name = "contacts", schema = "AddressBook", catalog = "")
+public class HbContactsEntity implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
     private int idcontact;
     private int iduser;
     private String contactName;
@@ -19,8 +20,9 @@ public class HbContactsEntity {
     private String contactPhone;
     private String contactAddress;
 
-    @javax.persistence.Id
-    @javax.persistence.Column(name = "idcontact", nullable = false)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "idcontact", nullable = false)
     public int getIdcontact() {
         return idcontact;
     }
@@ -29,8 +31,9 @@ public class HbContactsEntity {
         this.idcontact = idcontact;
     }
 
-    @javax.persistence.Id
-    @javax.persistence.Column(name = "iduser", nullable = false)
+    // IMPORTANT: iduser is NOT a primary key, so NO @Id here
+    @Basic
+    @Column(name = "iduser", nullable = false)
     public int getIduser() {
         return iduser;
     }
@@ -39,8 +42,8 @@ public class HbContactsEntity {
         this.iduser = iduser;
     }
 
-    @javax.persistence.Basic
-    @javax.persistence.Column(name = "contact_name", nullable = true, length = -1)
+    @Basic
+    @Column(name = "contact_name", nullable = true, length = -1)
     public String getContactName() {
         return contactName;
     }
@@ -49,8 +52,8 @@ public class HbContactsEntity {
         this.contactName = contactName;
     }
 
-    @javax.persistence.Basic
-    @javax.persistence.Column(name = "contact_email", nullable = true, length = -1)
+    @Basic
+    @Column(name = "contact_email", nullable = true, length = -1)
     public String getContactEmail() {
         return contactEmail;
     }
@@ -59,8 +62,8 @@ public class HbContactsEntity {
         this.contactEmail = contactEmail;
     }
 
-    @javax.persistence.Basic
-    @javax.persistence.Column(name = "contact_phone", nullable = true, length = 20)
+    @Basic
+    @Column(name = "contact_phone", nullable = true, length = 20)
     public String getContactPhone() {
         return contactPhone;
     }
@@ -69,8 +72,8 @@ public class HbContactsEntity {
         this.contactPhone = contactPhone;
     }
 
-    @javax.persistence.Basic
-    @javax.persistence.Column(name = "contact_address", nullable = true, length = -1)
+    @Basic
+    @Column(name = "contact_address", nullable = true, length = -1)
     public String getContactAddress() {
         return contactAddress;
     }
@@ -87,18 +90,17 @@ public class HbContactsEntity {
         HbContactsEntity that = (HbContactsEntity) o;
 
         if (idcontact != that.idcontact) return false;
+        if (iduser != that.iduser) return false;
         if (contactName != null ? !contactName.equals(that.contactName) : that.contactName != null) return false;
         if (contactEmail != null ? !contactEmail.equals(that.contactEmail) : that.contactEmail != null) return false;
         if (contactPhone != null ? !contactPhone.equals(that.contactPhone) : that.contactPhone != null) return false;
-        if (contactAddress != null ? !contactAddress.equals(that.contactAddress) : that.contactAddress != null)
-            return false;
-
-        return true;
+        return contactAddress != null ? contactAddress.equals(that.contactAddress) : that.contactAddress == null;
     }
 
     @Override
     public int hashCode() {
         int result = idcontact;
+        result = 31 * result + iduser;
         result = 31 * result + (contactName != null ? contactName.hashCode() : 0);
         result = 31 * result + (contactEmail != null ? contactEmail.hashCode() : 0);
         result = 31 * result + (contactPhone != null ? contactPhone.hashCode() : 0);
