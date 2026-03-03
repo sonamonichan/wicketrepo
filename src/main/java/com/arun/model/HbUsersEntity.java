@@ -1,7 +1,7 @@
 package com.arun.model;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import java.io.Serializable;
 
 /**
@@ -9,7 +9,7 @@ import java.io.Serializable;
  * Created by Arun on 2/28/2017.
  */
 
-@javax.persistence.Entity
+@jakarta.persistence.Entity
 public class HbUsersEntity {
     @GeneratedValue(strategy= GenerationType.AUTO)
     private int iduser;
@@ -18,8 +18,8 @@ public class HbUsersEntity {
     private String userpass;
     private String useremail;
 
-    @javax.persistence.Id
-    @javax.persistence.Column(name = "iduser", nullable = false)
+    @jakarta.persistence.Id
+    @jakarta.persistence.Column(name = "iduser", nullable = false)
     public int getIduser() {
         return iduser;
     }
@@ -28,8 +28,8 @@ public class HbUsersEntity {
         this.iduser = iduser;
     }
 
-    @javax.persistence.Basic
-    @javax.persistence.Column(name = "username", nullable = false, length = -1, unique = true)
+    @jakarta.persistence.Basic
+    @jakarta.persistence.Column(name = "username", nullable = false, length = -1, unique = true)
     public String getUsername() {
         return username;
     }
@@ -38,8 +38,8 @@ public class HbUsersEntity {
         this.username = username;
     }
 
-    @javax.persistence.Basic
-    @javax.persistence.Column(name = "userpass", nullable = false, length = -1)
+    @jakarta.persistence.Basic
+    @jakarta.persistence.Column(name = "userpass", nullable = false, length = -1)
     public String getUserpass() {
         return userpass;
     }
@@ -48,8 +48,8 @@ public class HbUsersEntity {
         this.userpass = userpass;
     }
 
-    @javax.persistence.Basic
-    @javax.persistence.Column(name = "useremail", nullable = true, length = -1)
+    @jakarta.persistence.Basic
+    @jakarta.persistence.Column(name = "useremail", nullable = true, length = -1)
     public String getUseremail() {
         return useremail;
     }
