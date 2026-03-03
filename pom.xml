@@ -94,6 +94,14 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- Wicket Tester (test scope, separated in Wicket 10) -->
+        <dependency>
+            <groupId>org.apache.wicket</groupId>
+            <artifactId>wicket-tester</artifactId>
+            <version>${wicket.version}</version>
+            <scope>test</scope>
+        </dependency>
+
         <!-- JETTY (tests) -->
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
