@@ -1,0 +1,48 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< com.arun:addressbook >------------------------
+[INFO] Building addressbook 1.0-SNAPSHOT
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ addressbook ---
+[INFO] Deleting /home/ec2-user/wicketrepo/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ addressbook ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 4 resources
+[INFO] Copying 8 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ addressbook ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 10 source files to /home/ec2-user/wicketrepo/target/classes
+[WARNING] bootstrap class path not set in conjunction with -source 1.7
+[WARNING] /home/ec2-user/wicketrepo/src/main/java/com/arun/contacts/ContactPage.java: Some input files use unchecked or unsafe operations.
+[WARNING] /home/ec2-user/wicketrepo/src/main/java/com/arun/contacts/ContactPage.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ addressbook ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ addressbook ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to /home/ec2-user/wicketrepo/target/test-classes
+[WARNING] bootstrap class path not set in conjunction with -source 1.7
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ addressbook ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-war-plugin:2.2:war (default-war) @ addressbook ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [addressbook] in [/home/ec2-user/wicketrepo/target/addressbook-1.0-SNAPSHOT]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/home/ec2-user/wicketrepo/src/main/webapp]
+[INFO] Webapp assembled in [112 msecs]
+[INFO] Building war: /home/ec2-user/wicketrepo/target/addressbook-1.0-SNAPSHOT.war
+[INFO] WEB-INF/web.xml already added, skipping
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.095 s
+[INFO] Finished at: 2026-03-03T12:39:39Z
+[INFO] ------------------------------------------------------------------------

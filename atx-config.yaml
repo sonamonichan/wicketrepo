@@ -1,0 +1,6 @@
+additionalPlanContext: |
+  Upgrade this repository to target JDK 21.
+  This service does NOT require Eureka or service discovery.
+  Prefer removing or disabling discovery client usage.
+validationCommands: |
+  mvn -DskipTests clean package
