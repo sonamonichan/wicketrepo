@@ -40,8 +40,8 @@
         <jetty9.version>9.2.19.v20160908</jetty9.version>
         <log4j.version>2.6.2</log4j.version>
         <junit.version>4.12</junit.version>
-        <hibernate.version>5.2.8.Final</hibernate.version>
-        <hibernate.validatior.version>5.4.0.Final</hibernate.validatior.version>
+        <hibernate.version>6.6.4.Final</hibernate.version>
+        <hibernate.validatior.version>8.0.1.Final</hibernate.validatior.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <wtp.version>none</wtp.version>
     </properties>
@@ -61,11 +61,11 @@
             <version>${wicket.version}</version>
         </dependency>
 
-        <!-- MySQL Connector (recommended: 5.1.49; you can revert to 5.1.6 if you must) -->
+        <!-- MySQL Connector -->
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.49</version>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <version>8.3.0</version>
         </dependency>
 
         <!-- LOG4J -->
@@ -84,7 +84,7 @@
         <dependency>
             <groupId>org.jboss.logging</groupId>
             <artifactId>jboss-logging</artifactId>
-            <version>3.3.0.Final</version>
+            <version>3.5.3.Final</version>
         </dependency>
 
         <!-- JUNIT (tests) -->
@@ -105,50 +105,32 @@
 
         <!-- Hibernate -->
         <dependency>
-            <groupId>org.hibernate</groupId>
+            <groupId>org.hibernate.orm</groupId>
             <artifactId>hibernate-core</artifactId>
             <version>${hibernate.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-entitymanager</artifactId>
-            <version>${hibernate.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.hibernate</groupId>
+            <groupId>org.hibernate.validator</groupId>
             <artifactId>hibernate-validator</artifactId>
             <version>${hibernate.validatior.version}</version>
         </dependency>
 
         <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-osgi</artifactId>
-            <version>${hibernate.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.hibernate</groupId>
+            <groupId>org.hibernate.orm</groupId>
             <artifactId>hibernate-envers</artifactId>
             <version>${hibernate.version}</version>
         </dependency>
+
+        <!-- Jakarta EL API and implementation for hibernate-validator -->
         <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-c3p0</artifactId>
-            <version>${hibernate.version}</version>
+            <groupId>jakarta.el</groupId>
+            <artifactId>jakarta.el-api</artifactId>
+            <version>5.0.1</version>
         </dependency>
         <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-proxool</artifactId>
-            <version>${hibernate.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-infinispan</artifactId>
-            <version>${hibernate.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-ehcache</artifactId>
-            <version>${hibernate.version}</version>
+            <groupId>org.glassfish.expressly</groupId>
+            <artifactId>expressly</artifactId>
+            <version>5.0.0</version>
         </dependency>
 
         <!-- Jakarta XML Binding (replaces javax.xml.bind:jaxb-api) -->
