@@ -37,13 +37,12 @@
 
     <properties>
         <wicket.version>10.3.0</wicket.version>
-        <jetty9.version>9.2.19.v20160908</jetty9.version>
-        <log4j.version>2.6.2</log4j.version>
-        <junit.version>4.12</junit.version>
+        <jetty11.version>11.0.24</jetty11.version>
+        <log4j.version>2.24.3</log4j.version>
+        <junit.version>4.13.2</junit.version>
         <hibernate.version>6.6.4.Final</hibernate.version>
         <hibernate.validatior.version>8.0.1.Final</hibernate.validatior.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <wtp.version>none</wtp.version>
     </properties>
 
     <dependencies>
@@ -97,9 +96,21 @@
 
         <!-- JETTY (tests) -->
         <dependency>
-            <groupId>org.eclipse.jetty.aggregate</groupId>
-            <artifactId>jetty-all</artifactId>
-            <version>${jetty9.version}</version>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-server</artifactId>
+            <version>${jetty11.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-webapp</artifactId>
+            <version>${jetty11.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-jmx</artifactId>
+            <version>${jetty11.version}</version>
             <scope>test</scope>
         </dependency>
 
