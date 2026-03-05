@@ -2,6 +2,7 @@ package com.arun;
 
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.protocol.http.WebApplication;
+import org.apache.wicket.csp.CSPDirective;
 
 /**
  * Application object for your web application.
@@ -26,5 +27,11 @@ public class WicketApplication extends WebApplication {
         super.init();
 
         // add your configuration here
+
+        // CSP configuration for Wicket 10
+        getCspSettings().blocking().add(CSPDirective.STYLE_SRC, "'self'");
+        getCspSettings().blocking().add(CSPDirective.STYLE_SRC, "https://fonts.googleapis.com");
+        getCspSettings().blocking().add(CSPDirective.STYLE_SRC, "https://maxcdn.bootstrapcdn.com");
+        getCspSettings().blocking().add(CSPDirective.FONT_SRC, "https://fonts.gstatic.com");
     }
 }
