@@ -36,7 +36,7 @@
     </licenses>
 
     <properties>
-        <wicket.version>7.6.0</wicket.version>
+        <wicket.version>10.3.0</wicket.version>
         <jetty9.version>9.2.19.v20160908</jetty9.version>
         <log4j.version>2.6.2</log4j.version>
         <junit.version>4.12</junit.version>
@@ -95,11 +95,11 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- JETTY (tests) -->
+        <!-- Wicket Tester (tests) -->
         <dependency>
-            <groupId>org.eclipse.jetty.aggregate</groupId>
-            <artifactId>jetty-all</artifactId>
-            <version>${jetty9.version}</version>
+            <groupId>org.apache.wicket</groupId>
+            <artifactId>wicket-tester</artifactId>
+            <version>${wicket.version}</version>
             <scope>test</scope>
         </dependency>
 

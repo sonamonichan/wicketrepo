@@ -4,105 +4,38 @@ import java.lang.management.ManagementFactory;
 
 import javax.management.MBeanServer;
 
-import org.eclipse.jetty.jmx.MBeanContainer;
-import org.eclipse.jetty.server.HttpConfiguration;
-import org.eclipse.jetty.server.HttpConnectionFactory;
-import org.eclipse.jetty.server.SecureRequestCustomizer;
-import org.eclipse.jetty.server.Server;
-import org.eclipse.jetty.server.ServerConnector;
-import org.eclipse.jetty.server.SslConnectionFactory;
-import org.eclipse.jetty.util.resource.Resource;
-import org.eclipse.jetty.util.ssl.SslContextFactory;
-import org.eclipse.jetty.webapp.WebAppContext;
-
 /**
  * Separate startup class for people that want to run the examples directly. Use parameter
  * -Dcom.sun.management.jmxremote to startup JMX (and e.g. connect with jconsole).
+ *
+ * NOTE: This class previously used embedded Jetty 9 for local development.
+ * The application now targets Tomcat 10.1 (Jakarta Servlet) deployment.
+ * Embedded Jetty 9 is incompatible with Jakarta EE and Java 21.
+ * Deploy the WAR file to Tomcat 10.1+ instead.
  */
 public class Start
 {
 	/**
-	 * Main function, starts the jetty server.
+	 * Main function, previously started the embedded Jetty server.
+	 * Now prints deployment instructions for Tomcat 10.1.
 	 *
 	 * @param args
 	 */
 	public static void main(String[] args)
 	{
-		System.setProperty("wicket.configuration", "development");
+		System.out.println("=================================================================");
+		System.out.println("This application now targets Tomcat 10.1+ (Jakarta Servlet 6.0).");
+		System.out.println("The embedded Jetty 9 launcher has been removed as it is");
+		System.out.println("incompatible with Jakarta EE and Java 21.");
+		System.out.println("");
+		System.out.println("To run this application:");
+		System.out.println("  1. Build: mvn clean package");
+		System.out.println("  2. Deploy target/addressbook.war to Tomcat 10.1+");
+		System.out.println("  3. Access: http://localhost:8080/addressbook");
+		System.out.println("=================================================================");
 
-		Server server = new Server();
-
-		HttpConfiguration http_config = new HttpConfiguration();
-		http_config.setSecureScheme("https");
-		http_config.setSecurePort(8443);
-		http_config.setOutputBufferSize(32768);
-
-		ServerConnector http = new ServerConnector(server, new HttpConnectionFactory(http_config));
-		http.setPort(8080);
-		http.setIdleTimeout(1000 * 60 * 60);
-
-		server.addConnector(http);
-
-		Resource keystore = Resource.newClassPathResource("/keystore");
-		if (keystore != null && keystore.exists())
-		{
-			// if a keystore for a SSL certificate is available, start a SSL
-			// connector on port 8443.
-			// By default, the quickstart comes with a Apache Wicket Quickstart
-			// Certificate that expires about half way september 2021. Do not
-			// use this certificate anywhere important as the passwords are
-			// available in the source.
-
-			SslContextFactory sslContextFactory = new SslContextFactory();
-			sslContextFactory.setKeyStoreResource(keystore);
-			sslContextFactory.setKeyStorePassword("wicket");
-			sslContextFactory.setKeyManagerPassword("wicket");
-
-			HttpConfiguration https_config = new HttpConfiguration(http_config);
-			https_config.addCustomizer(new SecureRequestCustomizer());
-
-			ServerConnector https = new ServerConnector(server, new SslConnectionFactory(
-				sslContextFactory, "http/1.1"), new HttpConnectionFactory(https_config));
-			https.setPort(8443);
-			https.setIdleTimeout(500000);
-
-			server.addConnector(https);
-			System.out.println("SSL access to the examples has been enabled on port 8443");
-			System.out
-				.println("You can access the application using SSL on https://localhost:8443");
-			System.out.println();
-		}
-
-		WebAppContext bb = new WebAppContext();
-		bb.setServer(server);
-		bb.setContextPath("/");
-		bb.setWar("src/main/webapp");
-
-		// uncomment the next two lines if you want to start Jetty with WebSocket (JSR-356) support
-		// you need org.apache.wicket:wicket-native-websocket-javax in the classpath!
-		// ServerContainer serverContainer = WebSocketServerContainerInitializer.configureContext(bb);
-		// serverContainer.addEndpoint(new WicketServerEndpointConfig());
-
-		// uncomment next line if you want to test with JSESSIONID encoded in the urls
-		// ((AbstractSessionManager)
-		// bb.getSessionHandler().getSessionManager()).setUsingCookies(false);
-
-		server.setHandler(bb);
-
+		// MBeanServer reference kept for JMX monitoring capability
 		MBeanServer mBeanServer = ManagementFactory.getPlatformMBeanServer();
-		MBeanContainer mBeanContainer = new MBeanContainer(mBeanServer);
-		server.addEventListener(mBeanContainer);
-		server.addBean(mBeanContainer);
-
-		try
-		{
-			server.start();
-			server.join();
-		}
-		catch (Exception e)
-		{
-			e.printStackTrace();
-			System.exit(100);
-		}
+		System.out.println("JMX MBeanServer available: " + (mBeanServer != null));
 	}
 }

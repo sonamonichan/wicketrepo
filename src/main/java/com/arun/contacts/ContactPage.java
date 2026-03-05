@@ -11,12 +11,11 @@ import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.ImageButton;
 import org.apache.wicket.markup.html.form.TextArea;
 import org.apache.wicket.markup.html.form.TextField;
-import org.apache.wicket.markup.html.link.ILinkListener;
 import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.repeater.RepeatingView;
-import org.apache.wicket.model.IModel;
 import org.apache.wicket.model.Model;
 import org.apache.wicket.request.resource.PackageResourceReference;
+import org.apache.wicket.request.resource.ResourceReference;
 import org.jboss.logging.Logger;
 
 
@@ -49,10 +48,6 @@ public class ContactPage extends WebPage {
     private Model<String> emailModel = Model.of(" ");
     private Model<String> nameHeadingModel = Model.of(" ");
     private Model<String> contactErrorModel = Model.of("Error");
-    private Model editModel = Model.of(editRef);
-    private Model deleteModel = Model.of(deleteRef);
-    private Model addModel = Model.of(addRef);
-    private Model signoutModel = Model.of(signoutRef);
 
     /**
      * Components of the webpage
@@ -70,6 +65,12 @@ public class ContactPage extends WebPage {
     private ImageButton addImage;
 
     private ContactDetailsForm contactDetailsForm;
+
+    /** Track the current ResourceReference for edit button so we can swap between edit/save icons */
+    private ResourceReference currentEditRef = editRef;
+    private ResourceReference currentAddRef = addRef;
+    private ResourceReference currentDeleteRef = deleteRef;
+    private ResourceReference currentSignoutRef = signoutRef;
 
 
     /**
@@ -94,7 +95,7 @@ public class ContactPage extends WebPage {
         add(new AddressNameListForm("addressNameList", userid));
 
         Link<Void> signoutLink = signoutLink("signOutLink");
-        signoutImage = new SignOutImageButton("signoutImg", signoutModel);
+        signoutImage = new SignOutImageButton("signoutImg", signoutRef);
 
         signoutImage.setDefaultFormProcessing(false);
 
@@ -114,7 +115,7 @@ public class ContactPage extends WebPage {
 
             ContactDataAccess contactDataAccess = new ContactDataAccess();
             List<HbContactsEntity> contactList = contactDataAccess.getAllContacts(userid);
-            addImage = new AddImageButton("addImg", addModel);
+            addImage = new AddImageButton("addImg", addRef);
             addImage.setDefaultFormProcessing(false);
             add(addImage);
             RepeatingView namelistItems = new RepeatingView("namelistItems");
@@ -148,7 +149,10 @@ public class ContactPage extends WebPage {
             } else {
                 nameHeadingModel.setObject("No Contacts available, Add new contact below");
                 contactDetailsForm.add(nameHeadingField);
-                editModel.setObject(saveRef);
+                currentEditRef = saveRef;
+                contactDetailsForm.remove(editImage);
+                editImage = new EditImageButton("editImg", saveRef);
+                editImage.setDefaultFormProcessing(false);
                 contactDetailsForm.add(editImage);
                 nameField.setEnabled(true);
                 contactDetailsForm.add(nameField);
@@ -205,14 +209,14 @@ public class ContactPage extends WebPage {
             contactError.setVisible(false);
             add(contactError);
 
-            editImage = new EditImageButton("editImg", editModel);
+            editImage = new EditImageButton("editImg", editRef);
             //  add(editLink("editLink").add(editImage));
             editImage.setDefaultFormProcessing(false);
 
             add(editImage);
             //editImage.add(editLink("edit"));
 
-            deleteImage = new DeleteImageButton("deleteImg", deleteModel);
+            deleteImage = new DeleteImageButton("deleteImg", deleteRef);
             deleteImage.setDefaultFormProcessing(false);
             add(deleteImage);
         }
@@ -229,15 +233,18 @@ public class ContactPage extends WebPage {
      */
     public class EditImageButton extends ImageButton {
 
-        public EditImageButton(String id, IModel<String> model) {
-            super(id, model);
+        public EditImageButton(String id, ResourceReference resourceReference) {
+            super(id, resourceReference);
         }
 
         @Override
         public void onSubmit() {
             LOGGER.info("edit clicked ");
             if (!save) {
-                editModel.setObject(saveRef);
+                currentEditRef = saveRef;
+                contactDetailsForm.remove(editImage);
+                editImage = new EditImageButton("editImg", saveRef);
+                editImage.setDefaultFormProcessing(false);
                 contactDetailsForm.add(editImage);
                 nameField.setEnabled(true);
                 contactDetailsForm.add(nameField);
@@ -307,7 +314,10 @@ public class ContactPage extends WebPage {
                     return;
                 }
 
-                editModel.setObject(editRef);
+                currentEditRef = editRef;
+                contactDetailsForm.remove(editImage);
+                editImage = new EditImageButton("editImg", editRef);
+                editImage.setDefaultFormProcessing(false);
                 contactDetailsForm.add(editImage);
                 nameField.setEnabled(false);
                 contactDetailsForm.add(nameField);
@@ -335,8 +345,8 @@ public class ContactPage extends WebPage {
      */
     public class DeleteImageButton extends ImageButton {
 
-        public DeleteImageButton(String id, IModel<String> model) {
-            super(id, model);
+        public DeleteImageButton(String id, ResourceReference resourceReference) {
+            super(id, resourceReference);
         }
 
         @Override
@@ -374,8 +384,8 @@ public class ContactPage extends WebPage {
      */
     public class AddImageButton extends ImageButton {
 
-        public AddImageButton(String id, IModel<String> model) {
-            super(id, model);
+        public AddImageButton(String id, ResourceReference resourceReference) {
+            super(id, resourceReference);
         }
 
         @Override
@@ -383,7 +393,10 @@ public class ContactPage extends WebPage {
             LOGGER.info("add clicked ");
             nameHeadingModel.setObject("Add new contact below");
             contactDetailsForm.add(nameHeadingField);
-            editModel.setObject(saveRef);
+            currentEditRef = saveRef;
+            contactDetailsForm.remove(editImage);
+            editImage = new EditImageButton("editImg", saveRef);
+            editImage.setDefaultFormProcessing(false);
             contactDetailsForm.add(editImage);
             nameModel.setObject("");
             nameField.setEnabled(true);
@@ -406,8 +419,8 @@ public class ContactPage extends WebPage {
 
     public class SignOutImageButton extends ImageButton {
 
-        public SignOutImageButton(String id, IModel<String> model) {
-            super(id, model);
+        public SignOutImageButton(String id, ResourceReference resourceReference) {
+            super(id, resourceReference);
         }
 
         @Override
@@ -418,9 +431,11 @@ public class ContactPage extends WebPage {
 
 
     /**
-     * Class that implements ILinkListener to override onLickClicked() so that the contact display action can be performed
+     * Class that implements LinkClickedCallback to override onLinkClicked() so that the contact display action can be performed
      */
-    public class OnContactClicked implements ILinkListener {
+    public class OnContactClicked implements ContactLink.LinkClickedCallback {
+
+        private static final long serialVersionUID = 1L;
 
         int contactId;
         String contactName;
@@ -455,7 +470,10 @@ public class ContactPage extends WebPage {
             emailModel.setObject("" + contactEmail);
             emailField.setEnabled(false);
             contactDetailsForm.add(emailField);
-            editModel.setObject(editRef);
+            currentEditRef = editRef;
+            contactDetailsForm.remove(editImage);
+            editImage = new EditImageButton("editImg", editRef);
+            editImage.setDefaultFormProcessing(false);
             contactDetailsForm.add(editImage);
             contactFilled = true;
             showContactID = contactId;

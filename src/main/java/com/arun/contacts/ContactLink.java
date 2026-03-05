@@ -2,9 +2,10 @@ package com.arun.contacts;
 
 
 import org.apache.wicket.markup.html.basic.Label;
-import org.apache.wicket.markup.html.link.ILinkListener;
 import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.panel.Panel;
+
+import java.io.Serializable;
 
 
 /**
@@ -13,27 +14,34 @@ import org.apache.wicket.markup.html.panel.Panel;
  */
 class ContactLink extends Panel {
 
+    /**
+     * Functional interface to replace the removed ILinkListener from Wicket 8+
+     */
+    @FunctionalInterface
+    public interface LinkClickedCallback extends Serializable {
+        void onLinkClicked();
+    }
 
     /**
      *
      * @param id - component id
      * @param linkName - Name of the contact
-     * @param linkListener - Listener to perform action when the contact is clicked
+     * @param linkClickedCallback - Callback to perform action when the contact is clicked
      */
      ContactLink(String id, String linkName,
-                       ILinkListener linkListener) {
+                       LinkClickedCallback linkClickedCallback) {
         super(id);
         setRenderBodyOnly(true);
-        add(generateLink(linkListener, linkName));
+        add(generateLink(linkClickedCallback, linkName));
     }
 
     /**
      * Function creates th contact label and link
-     * @param linkListener - contact onClick listener
+     * @param linkClickedCallback - contact onClick callback
      * @param linkName - contact lable name
      * @return
      */
-    private Link<?> generateLink(final ILinkListener linkListener,
+    private Link<?> generateLink(final LinkClickedCallback linkClickedCallback,
                                  String linkName) {
         Label linkLabel = new Label("linkLabel", linkName);
         Link<String> link = new Link<String>("link") {
@@ -41,7 +49,7 @@ class ContactLink extends Panel {
 
             @Override
             public void onClick() {
-                linkListener.onLinkClicked();
+                linkClickedCallback.onLinkClicked();
             }
         };
         link.add(linkLabel);
