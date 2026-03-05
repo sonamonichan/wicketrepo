@@ -37,9 +37,8 @@
 
     <properties>
         <wicket.version>10.3.0</wicket.version>
-        <jetty9.version>9.2.19.v20160908</jetty9.version>
-        <log4j.version>2.6.2</log4j.version>
-        <junit.version>4.12</junit.version>
+        <log4j.version>2.23.1</log4j.version>
+        <junit.version>4.13.2</junit.version>
         <hibernate.version>6.4.10.Final</hibernate.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
