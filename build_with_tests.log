@@ -41,7 +41,24 @@
   Use -proc:none to disable annotation processing.
 [INFO] 
 [INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ addressbook ---
-[INFO] Tests are skipped.
+[INFO] Surefire report directory: /home/ec2-user/wicketrepo/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.arun.TestHomePage
+SLF4J(W): No SLF4J providers were found.
+SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+SLF4J(W): Class path contains SLF4J bindings targeting slf4j-api versions 1.7.x or earlier.
+SLF4J(W): Ignoring binding found at [jar:file:/home/ec2-user/.m2/repository/org/apache/logging/log4j/log4j-slf4j-impl/2.23.1/log4j-slf4j-impl-2.23.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J(W): See https://www.slf4j.org/codes.html#ignoredBindings for an explanation.
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.9 sec
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
 [INFO] 
 [INFO] --- maven-war-plugin:3.4.0:war (default-war) @ addressbook ---
 [INFO] Packaging webapp
@@ -52,6 +69,6 @@
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  4.328 s
-[INFO] Finished at: 2026-03-05T05:26:21Z
+[INFO] Total time:  5.859 s
+[INFO] Finished at: 2026-03-05T05:25:47Z
 [INFO] ------------------------------------------------------------------------

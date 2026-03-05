@@ -107,6 +107,14 @@
             <version>${hibernate.version}</version>
         </dependency>
 
+        <!-- Jakarta Servlet API (provided by Tomcat 10.1 at runtime, needed for tests) -->
+        <dependency>
+            <groupId>jakarta.servlet</groupId>
+            <artifactId>jakarta.servlet-api</artifactId>
+            <version>6.0.0</version>
+            <scope>provided</scope>
+        </dependency>
+
         <!-- Jakarta Persistence API -->
         <dependency>
             <groupId>jakarta.persistence</groupId>
