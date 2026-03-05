@@ -48,7 +48,7 @@ public class HibernateManager {
         try {
             transaction = session.beginTransaction();
            // list = session.createQuery("from HbUsersEntity where username = '" + username + "' ").list();
-            Query query = session.createQuery("from HbUsersEntity where username= :username" );
+            Query<HbUsersEntity> query = session.createQuery("from HbUsersEntity where username= :username", HbUsersEntity.class);
             query.setParameter("username",username);
             list = query.list();
             if (list.isEmpty()) {
@@ -82,7 +82,7 @@ public class HibernateManager {
         List<HbContactsEntity> list = null;
         try {
             transaction = session.beginTransaction();
-            Query query = session.createQuery("from HbContactsEntity where iduser= :user" );
+            Query<HbContactsEntity> query = session.createQuery("from HbContactsEntity where iduser= :user", HbContactsEntity.class);
             query.setParameter("user",userId);
             list = query.list();
             transaction.commit();
@@ -111,7 +111,7 @@ public class HibernateManager {
             try {
                 transaction = session.beginTransaction();
 
-                session.saveOrUpdate(object);
+                session.merge(object);
                 transaction.commit();
                 return true;
             } catch (HibernateException e) {
@@ -140,8 +140,8 @@ public class HibernateManager {
         try {
             transaction = session.beginTransaction();
             HbContactsEntity myObject;
-            myObject = session.load(HbContactsEntity.class,id);
-            session.delete(myObject);
+            myObject = session.get(HbContactsEntity.class,id);
+            session.remove(myObject);
             transaction.commit();
             return true;
         } catch (HibernateException e) {
@@ -169,7 +169,7 @@ public class HibernateManager {
         try {
             transaction = session.beginTransaction();
 
-            session.save(object);
+            session.persist(object);
             transaction.commit();
             return true;
         } catch (HibernateException e) {
